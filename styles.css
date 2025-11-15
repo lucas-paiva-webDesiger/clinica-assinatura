@@ -1,0 +1,485 @@
+/* styles.css — versão limpa e 100% responsiva para o index.html */
+/* Variáveis de tema */
+:root{
+  --champagne: #F7F3EE;
+  --deep: #103A45;
+  --graphite: #414A4C;
+  --gold: #C7A96A;
+  --muted: #7F8B8B;
+  --card: #FFFFFF;
+  --max-width: 1200px;
+  --radius: 14px;
+  --header-h: 78px;
+  --gap: 20px;
+}
+
+/* Reset base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html,body{height:100%;width:100%;margin:0;}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--graphite);
+  background: linear-gradient(180deg,var(--champagne) 0%, #FBF9F7 70%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  overflow-x:hidden;
+}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+/* Accessibility skip */
+.skip-link{position:absolute;left:-9999px;}
+.skip-link:focus{position:static;padding:8px 12px;background:#000;color:#fff;z-index:9999;}
+
+/* ================= Header ================= */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1100;
+  height:var(--header-h);
+  background:var(--champagne);
+  border-bottom:1px solid rgba(16,58,69,0.04);
+  display:flex;
+  align-items:center;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:12px 20px;
+}
+
+/* Brand */
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;}
+.brand-logo{
+  width:46px;height:46px;border-radius:10px;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.brand-text strong{display:block;font-size:15px;line-height:1.05}
+.brand-text small{display:block;font-size:11px;color:var(--muted)}
+
+/* Nav */
+.main-nav{display:flex;align-items:center;gap:12px}
+#nav-toggle{display:none;border:0;background:transparent;font-size:22px;cursor:pointer;padding:6px}
+.nav-list{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+.nav-list a{color:var(--deep);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav-list a:hover{background:rgba(16,58,69,0.06)}
+.nav-list .btn{padding:8px 18px;border-radius:999px}
+
+/* ================= Hero ================= */
+.hero{
+  display:grid;
+  grid-template-columns: 1fr minmax(280px,420px);
+  gap:var(--gap);
+  align-items:center;
+  padding-top:18px;
+  padding-bottom:18px;
+}
+
+/* Left */
+.hero-left{padding-right:6px}
+.eyebrow{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.hero-title{
+  font-family:'Playfair Display', serif;
+  font-size:44px;
+  color:var(--deep);
+  line-height:1.02;
+  margin:6px 0 12px;
+}
+.hero-title .accent{color:var(--gold)}
+.lead{max-width:560px;color:var(--graphite);opacity:0.95}
+.hero-ctas{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* Right */
+.hero-right{
+  position:relative;
+  height:360px;
+  border-radius:var(--radius);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(16,58,69,0.04), rgba(16,58,69,0.02));
+}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(3px) brightness(1.05)}
+.portrait-card{
+  position:absolute;
+  left:8%;
+  bottom:9%;
+  width:62%;
+  background:rgba(255,255,255,0.28);
+  backdrop-filter: blur(6px);
+  padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.36);
+  box-shadow:0 8px 20px rgba(16,58,69,0.04);
+}
+.portrait-card h4{margin:0;color:var(--deep);font-family:'Playfair Display',serif}
+.portrait-card small{color:var(--muted);font-size:13px}
+
+/* ================= Philosophy / Pill grid ================= */
+.philosophy{padding:22px 0}
+.philosophy h2{font-family:'Playfair Display',serif;color:var(--deep);font-size:24px;margin-bottom:8px}
+.pill-grid{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
+.pillar{flex:1;min-width:190px;background:linear-gradient(180deg,transparent,rgba(255,255,255,0.5));padding:14px;border-radius:12px;text-align:center}
+.pillar .icon{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.04);margin-bottom:8px;color:var(--gold)}
+.pillar h3{margin:6px 0;color:var(--deep)}
+
+/* ================= Treatments ================= */
+.treatments{padding:18px 0}
+.treatments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:12px}
+.card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 8px 18px rgba(16,58,69,0.06);border:1px solid rgba(16,58,69,0.03);display:flex;flex-direction:column}
+.thumb{width:100%;height:140px;border-radius:10px;background-size:cover;background-position:center;margin-bottom:12px}
+.link-more{margin-top:auto;color:var(--deep);font-weight:600}
+
+/* ================= Cases (grid + lightbox) ================= */
+.cases{padding:22px 0}
+.cases-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;align-items:start}
+.case-figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.case-img{width:100%;height:260px;object-fit:cover;border-radius:12px;box-shadow:0 10px 22px rgba(16,58,69,0.06);border:1px solid rgba(16,58,69,0.03);display:block}
+.case-main .case-img{height:340px}
+.case-side{display:grid;grid-template-rows:repeat(3,1fr);gap:12px}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:1200;padding:20px}
+.lightbox[aria-hidden="false"]{display:flex}
+.lightbox-content{max-width:1000px;width:100%;text-align:center}
+.lightbox-content img{width:100%;height:auto;border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,0.5)}
+.lightbox-close{position:absolute;right:18px;top:18px;background:transparent;color:#fff;border:0;font-size:22px;cursor:pointer}
+
+/* ================= Tech / Experience / Testimonials ================= */
+.tech{background:var(--deep);color:#fff;padding:24px;border-radius:12px;margin:18px 0}
+.tech-grid{display:flex;gap:12px;flex-wrap:wrap}
+.tech-card{flex:1;min-width:200px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));padding:14px;border-radius:10px}
+
+.experience{display:flex;gap:18px;align-items:flex-start;padding:20px 0;flex-wrap:wrap}
+.exp-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;width:360px}
+.exp-gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+
+.testimonials{padding:20px 0;text-align:center}
+.testimonial-card{max-width:760px;margin:0 auto;padding:20px;background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(16,58,69,0.06)}
+
+/* CTA / form */
+.cta-footer{padding:24px 20px;text-align:center;background:linear-gradient(180deg,var(--champagne),#fff);border-radius:12px;margin-top:18px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.form-grid .full{grid-column:1/-1}
+.form-grid input, .form-grid textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #E6E7E7}
+
+/* footer */
+.site-footer{padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+
+/* utilities */
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+/* =========== Responsive breakpoints =========== */
+
+/* medium */
+@media (max-width:1100px){
+  .hero{grid-template-columns:1fr minmax(220px,380px);gap:18px}
+  .hero-title{font-size:38px}
+  .treatments-grid{grid-template-columns:repeat(2,1fr)}
+  .case-img{height:220px}
+  .case-main .case-img{height:280px}
+}
+
+/* tablet */
+@media (max-width:768px){
+  :root{ --header-h:72px; }
+  /* header / nav */
+  #nav-toggle{display:inline-block}
+  .nav-list{display:none;position:fixed;right:14px;top:calc(var(--header-h) + 8px);background:#fff;padding:12px;border-radius:10px;box-shadow:0 12px 30px rgba(16,58,69,0.12);min-width:200px;flex-direction:column;z-index:2000}
+  .nav-list.show{display:flex}
+
+  /* hero stacks */
+  .hero{grid-template-columns:1fr;gap:16px;padding-top:12px}
+  .hero-title{font-size:28px}
+  .hero-right{height:300px}
+  .portrait-card{left:6%;width:72%;bottom:6%}
+
+  /* grids stack */
+  .treatments-grid{grid-template-columns:1fr}
+  .cases-grid{grid-template-columns:1fr;gap:12px}
+  .case-side{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;gap:10px}
+
+  /* forms */
+  .form-grid{grid-template-columns:1fr}
+  .exp-gallery{width:100%;grid-template-columns:repeat(2,1fr)}
+  main.container{padding-top:calc(var(--header-h) + 8px)}
+}
+
+/* small phones */
+@media (max-width:420px){
+  :root{ --header-h:68px; }
+  .header-inner{padding:10px 14px}
+  .hero-title{font-size:22px}
+  .hero-right{height:240px}
+  .portrait-card{left:6%;width:76%;bottom:6%;padding:10px}
+  .case-img{height:180px}
+  .case-main .case-img{height:220px}
+  .exp-gallery img{height:80px}
+  .nav-list{right:8px;top:calc(var(--header-h) + 6px);min-width:160px}
+  .container{padding-left:12px;padding-right:12px}
+}
+
+/* Safety final rules to avoid overflow */
+html,body{overflow-x:hidden!important}
+img,picture,video,iframe{max-width:100%;height:auto;display:block}
+.hero, .treatments-grid, .cases-grid, .exp-gallery{min-width:0}
+
+/* Small visual polish */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid transparent;font-weight:600;text-decoration:none}
+.btn-primary{background:var(--deep);color:#fff}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--deep)}
+
+/* Layout padrão (desktop) */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* esquerda maior, direita menor */
+  gap: 20px;
+}
+
+/* Tablets e celulares */
+@media (max-width: 900px) {
+  .cases-grid {
+    grid-template-columns: 1fr !important; /* empilha no mobile */
+  }
+
+  .case-side {
+    grid-template-columns: 1fr 1fr; /* duas colunas pequenas */
+    gap: 14px;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+  .case-side {
+    grid-template-columns: 1fr; /* empilha tudo */
+  }
+}
+
+/* =========================
+   Ajustes: Botão Agendar + espaçamento de CTAs
+   Cole este bloco no FINAL do styles.css
+   ========================= */
+
+/* 1) Botões principais - base consistente */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  min-height: 44px;           /* touch target */
+  box-sizing: border-box;
+}
+
+/* 2) Botão Agendar global (destacado) */
+.btn-primary {
+  background: var(--deep);
+  color: #fff;
+  border: 0;
+  padding: 11px 20px;
+  min-width: 170px;          /* mantém tamanho agradável em desktop */
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:focus { outline: 3px solid rgba(16,58,69,0.12); outline-offset: 2px; }
+
+/* 3) Botões outline (ex: WhatsApp) */
+.btn-outline {
+  background: transparent;
+  border: 1.6px solid var(--gold);
+  color: var(--deep);
+  padding: 10px 18px;
+  min-width: 150px;
+}
+
+/* 4) Espaçamento uniforme entre CTAs no hero e na seção CTA */
+.hero-ctas,
+.cta-actions {
+  display: flex;
+  gap: 12px;                 /* espaço entre os botões */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 5) Mobile: empilha os botões e faz 100% de largura (melhor para toque) */
+@media (max-width: 768px) {
+  .hero-ctas,
+  .cta-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-ctas .btn,
+  .cta-actions .btn {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px;
+  }
+
+  /* diminuir tamanho do botão dentro do menu móvel (nav dropdown) */
+  .nav-list .btn {
+    width: auto;
+    padding: 8px 14px;
+    min-width: 120px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+}
+
+/* 6) Corrige botão agendar que porventura estiver dentro do nav dropdown (evita pill enorme) */
+.nav-list .btn-primary {
+  background: var(--deep);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  min-width: auto;
+  box-shadow: none;
+}
+
+/* 7) Pequena melhoria visual: alinhamento e espaçamento em volta (header/menu) */
+.header-inner { gap: 14px; }
+.nav-list a { padding: 8px 10px; }
+
+/* 8) Forçar boa aparência quando botões estiverem dentro de cards (ex: view-btn) */
+.view-btn,
+.link-more {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(16,58,69,0.06);
+  background: transparent;
+  color: var(--deep);
+}
+
+/* 9) Proteção final: evita que algum estilo antigo espalhe largura extra */
+.nav-list .btn,
+.hero-ctas .btn,
+.cta-actions .btn {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Remover o blur da imagem no hero */
+.hero-img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+
+/* ======= Correções rápidas header / logo / sr-only ======= */
+
+/* 1) Logo: reduzir e garantir aspecto (se você usou <img class="brand-logo">) */
+.brand-logo {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  object-fit: contain;
+  border-radius: 8px;
+  background: transparent !important;
+  padding: 2px;           /* leve espaçamento interno se houver borda */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Se você manteve a versão em <span> 'DC', garante estilo também */
+.brand .brand-logo:not(img) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight:700;
+  color:#fff;
+  background:var(--deep);
+}
+
+/* 2) Brand / header alinhamento */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+/* Ajusta o bloco com nome da clínica para não quebrar linha */
+.brand-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+/* reduz o tamanho do subtítulo para não empurrar */
+.brand-text strong { font-size: 15px; }
+.brand-text small { font-size: 11px; color: var(--muted); }
+
+/* 3) sr-only: esconder visualmente texto de acessibilidade (não mostrar "Abrir menu") */
+.sr-only, .screen-reader-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 4) Nav toggle (hamburger): garantir só o ícone visível e bom hit area */
+#nav-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--deep);
+}
+
+/* remove texto ou pseudo que algum JS/HTML colocou dentro do botão */
+#nav-toggle > span:not(.sr-only) {
+  display: inline-block;
+}
+
+/* 5) Espaçamento do header e prevenção de overlap */
+.site-header {
+  height: var(--header-h, 78px);
+  align-items: center;
+}
+.header-inner { padding: 10px 18px; }
+
+/* 6) Forçar que o menu não cubra a logo (mobile) */
+@media (max-width: 768px) {
+  .header-inner { gap: 10px; }
+  .nav-list { right: 12px; top: calc(var(--header-h, 78px) + 8px); }
+  .brand-text strong { font-size: 14px; }
+  .brand-logo { width: 40px !important; height: 40px !important; }
+}
+
+/* 7) Proteção: garantir que o hero comece abaixo do header */
+main.container { padding-top: calc(var(--header-h, 78px) + 8px) !important; }
+
+

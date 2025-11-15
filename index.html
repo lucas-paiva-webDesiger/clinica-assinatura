@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>O Sorriso é Sua Assinatura — Clínica Premium</title>
+  <meta name="description" content="Landing page premium para clínica odontológica — design elegante, responsivo e focado em conversão." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+
+</head>
+<body>
+  <!-- Accessible skip link -->
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Clínica Assinatura - voltar ao topo">
+        <img src="assets/logo.svg" alt="Logo Clínica Assinatura" class="brand-logo">
+
+        <span class="brand-text">
+          <strong>Clínica Assinatura</strong>
+          <small>Odontologia Estética</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span class="sr-only">Abrir menu</span>
+          ☰
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#estudos">Estudos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a class="btn btn-primary" href="#agendar">Agendar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title" class="hero-title">
+          O Sorriso é<br>
+          <span class="accent">Sua Assinatura.</span><br>
+          Nós cuidamos de valorizar o seu.
+        </h1>
+        <p class="lead">Tratamentos odontológicos avançados, precisão estética e atendimento personalizado. Planejamento digital e materiais de alta qualidade pensados para resultados naturais.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" id="agendar" href="#contato">Agendar Consulta Privada</a>
+          <a class="btn btn-outline" href="#estudos">Ver Estudos</a>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-hidden="false">
+        <div class="hero-media">
+          <!-- substitua hero.jpg por sua imagem em assets/ -->
+          <img src="assets/hero.jpeg" alt="Dentista sorrindo - Clínica" class="hero-img" />
+          <div class="portrait-card">
+            <h4>Dra. Maria Oliveira</h4>
+            <small>Especialista em Estética & Implantodontia — 12 anos</small>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy" aria-labelledby="philo-title">
+      <h2 id="philo-title">Filosofia da Clínica</h2>
+      <p class="muted">Mais que uma clínica odontológica, somos uma marca dedicada à excelência estética e ao cuidado personalizado. Cada sorriso é único.</p>
+
+      <div class="pill-grid">
+        <article class="pillar" aria-labelledby="p1">
+          <div class="icon" aria-hidden="true">⚙️</div>
+          <h3 id="p1">Precisão</h3>
+          <p>Cada procedimento com planejamento digital para máxima previsibilidade.</p>
+        </article>
+
+        <article class="pillar" aria-labelledby="p2">
+          <div class="icon" aria-hidden="true">✨</div>
+          <h3 id="p2">Estética Natural</h3>
+          <p>Resultados que valorizam a identidade do paciente com harmonia e naturalidade.</p>
+        </article>
+
+        <article class="pillar" aria-labelledby="p3">
+          <div class="icon" aria-hidden="true">🛋️</div>
+          <h3 id="p3">Experiência Confortável</h3>
+          <p>Ambiente pensado para bem-estar, conforto e privacidade durante todo o tratamento.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Treatments -->
+    <section id="servicos" class="treatments" aria-labelledby="treat-title">
+      <h2 id="treat-title">Tratamentos Assinatura</h2>
+      <p class="muted">Cada procedimento é uma experiência premium — desenvolvida especialmente para você.</p>
+
+      <div class="treatments-grid">
+        <article class="card">
+          <div class="thumb" style="background-image:url('assets/treatment1.jpeg')" role="img" aria-label="Sorriso Luminoso"></div>
+          <h3>Sorriso Luminoso</h3>
+          <p>Clareamento com protocolo seguro e resultados naturais.</p>
+          <a class="link-more" href="#contato">Saiba mais →</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:url('assets/treatment2.jpeg')" role="img" aria-label="Sorriso Contornado"></div>
+          <h3>Sorriso Contornado</h3>
+          <p>Lentes de contato dentais com mínima intervenção para alta estética.</p>
+          <a class="link-more" href="#contato">Saiba mais →</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:url('assets/treatment3.jpeg')" role="img" aria-label="Estrutura Renovada"></div>
+          <h3>Estrutura Renovada</h3>
+          <p>Implantes e reabilitação com planejamento digital 3D.</p>
+          <a class="link-more" href="#contato">Saiba mais →</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:url('assets/treatment4.jpeg')" role="img" aria-label="Harmonia Facial"></div>
+          <h3>Harmonia Facial</h3>
+          <p>Procedimentos integrados para equilíbrio entre sorriso e rosto.</p>
+          <a class="link-more" href="#contato">Saiba mais →</a>
+        </article>
+      </div>
+    </section>
+
+   <!-- Studies of case (com imagens + lightbox) -->
+<section id="estudos" class="cases" aria-labelledby="cases-title">
+  <h2 id="cases-title">Estudos de Caso</h2>
+  <p class="muted">Histórias reais de transformações — cada uma única como o sorriso criado.</p>
+
+  <div class="cases-grid">
+    <!-- caso principal (grande) -->
+    <article class="case-main card" tabindex="0">
+      <figure class="case-figure">
+        <img src="assets/case1.jpeg" alt="Antes e depois - Clareamento (M.S.)" class="case-img" loading="lazy">
+        <figcaption>
+          <h3>Caso: Sorriso Luminoso — M.S.</h3>
+          <p class="muted">Clareamento complexo com biomateriais e acompanhamento personalizado.</p>
+          <button class="btn btn-outline view-btn" data-src="assets/case1.jpg" data-caption="Clareamento — M.S.">Ver Imagem</button>
+        </figcaption>
+      </figure>
+    </article>
+
+    <!-- coluna lateral com 3 pequenos -->
+    <div class="case-side">
+      <article class="case-small card">
+        <figure class="case-figure">
+          <img src="assets/case3.jpeg" alt="Lentes de contato dental (A.R.)" class="case-img" loading="lazy">
+          <figcaption>
+            <h4>Caso: Lentes — A.R.</h4>
+            <p class="muted">Transformação estética com mínima preparação.</p>
+            <button class="btn btn-outline view-btn" data-src="assets/case2.jpg" data-caption="Lentes Dentais — A.R.">Ver Imagem</button>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="case-small card">
+        <figure class="case-figure">
+          <img src="assets/case4.jpeg" alt="Implante dentário (J.P.)" class="case-img" loading="lazy">
+          <figcaption>
+            <h4>Caso: Implante — J.P.</h4>
+            <p class="muted">Reabilitação funcional com protocolo digital.</p>
+            <button class="btn btn-outline view-btn" data-src="assets/case3.jpg" data-caption="Implante — J.P.">Ver Imagem</button>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="case-small card">
+        <figure class="case-figure">
+          <img src="assets/case5.jpeg" alt="Harmonização facial (L.C.)" class="case-img" loading="lazy">
+          <figcaption>
+            <h4>Caso: Harmonização — L.C.</h4>
+            <p class="muted">Integração estética sorriso/face.</p>
+            <button class="btn btn-outline view-btn" data-src="assets/case4.jpg" data-caption="Harmonização — L.C.">Ver Imagem</button>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox modal (adicione logo após o footer ou no fim do body) -->
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de imagem">
+  <button class="lightbox-close" aria-label="Fechar">✕</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption" class="muted small"></p>
+  </div>
+</div>
+
+
+    <!-- Tech -->
+    <section class="tech" aria-labelledby="tech-title">
+      <h2 id="tech-title">Tecnologias Inteligentes</h2>
+      <p class="muted">Equipamentos de última geração que revolucionam a experiência odontológica.</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h4>Scanner 3D</h4>
+          <p>Digitalização precisa para próteses e planejamento perfeito.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Planejamento Digital de Sorriso</h4>
+          <p>Simulações realistas para validar o resultado antes do procedimento.</p>
+        </div>
+        <div class="tech-card">
+          <h4>Laser de Última Geração</h4>
+          <p>Procedimentos menos invasivos e recuperação otimizada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" aria-labelledby="exp-title">
+      <div>
+        <h2 id="exp-title">Ambiente & Experiência</h2>
+        <p class="muted">Cada detalhe foi pensado para proporcionar uma experiência sensorial única.</p>
+        <ul class="muted small">
+          <li>Ambiente climatizado com música selecionada</li>
+          <li>Materiais premium e atendimento discreto</li>
+          <li>Protocolos de biossegurança e privacidade</li>
+        </ul>
+        <a class="btn btn-outline" href="#contato">Conheça nossa clínica</a>
+      </div>
+
+      <div class="exp-gallery">
+        <img src="assets/room1.jpeg" alt="Recepção da clínica">
+        <img src="assets/room2.jpeg" alt="Sala de atendimento">
+        <img src="assets/room3.jpeg" alt="Sala de procedimentos">
+        <img src="assets/room4.jpeg" alt="Detalhe da clínica">
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" aria-labelledby="test-title">
+      <h2 id="test-title">Depoimentos Premium</h2>
+      <blockquote class="testimonial-card">
+        <p class="quote">“Atendimento personalizado e cuidado em cada detalhe. Simplesmente perfeito.”</p>
+        <cite>M.L.</cite>
+      </blockquote>
+    </section>
+
+    <!-- CTA Footer / Contact -->
+    <section id="contato" class="cta-footer" aria-labelledby="cta-title">
+      <h2 id="cta-title">Sua nova versão começa com um sorriso. Vamos iniciar?</h2>
+      <p class="muted">Agende sua consulta exclusiva e descubra como transformar seu sorriso em sua melhor assinatura pessoal.</p>
+
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="#agendar">Agendar Consulta Privada</a>
+        <a class="btn btn-outline" href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp Direto</a>
+      </div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span class="sr-only">Nome</span>
+            <input type="text" name="name" placeholder="Seu nome" required>
+          </label>
+
+          <label>
+            <span class="sr-only">Telefone</span>
+            <input type="tel" name="phone" placeholder="Telefone (WhatsApp)" required>
+          </label>
+
+          <label class="full">
+            <span class="sr-only">Mensagem</span>
+            <textarea name="message" rows="3" placeholder="Conte-nos sobre sua necessidade"></textarea>
+          </label>
+
+          <div class="form-actions full">
+           <button id="btn-whatsapp" type="button" class="btn btn-primary">Enviar pelo WhatsApp</button>
+
+          </div>
+        </div>
+        <div id="form-status" class="form-status" aria-live="polite"></div>
+      </form>
+
+      <p class="small muted">Horário de Atendimento: Segunda a Sexta, 9h às 18h • Localização: Centro Médico Premium — Consultório 126</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© <span id="year"></span> Clínica Assinatura — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
